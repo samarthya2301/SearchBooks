@@ -1,0 +1,23 @@
+<resources>
+	<string name="app_name">Search Books</string>
+	<string name="search_icon">Search Icon</string>
+	<string name="search_for_a_book">Search a Book</string>
+	<string name="search">Search</string>
+	<string name="professional_android">Professional Android</string>
+	<string name="reto_meier_ian_lake">Reto Meier, Ian Lake</string>
+	<string name="empty_state">Empty State</string>
+	<string name="enter_book_type_and_press_on_search_icon">enter book type and press on \'search\' icon</string>
+	<string name="book_image">Book Image</string>
+	<string name="searching_books">Searching Books…</string>
+	<string name="total_books">Total Books</string>
+	<string name="price_of_book">&#x20B9;3000</string>
+	<string name="rupee_symbol">&#x20B9;</string>
+	<string name="pages_1000">Pages: 1000</string>
+
+	<string-array name="bookLimits">
+		<item>0–10</item>
+		<item>10–20</item>
+		<item>20–30</item>
+		<item>30–40</item>
+	</string-array>
+</resources>

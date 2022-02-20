@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".MainActivity" >
+
+	<LinearLayout
+		android:id="@+id/searchBarContainer"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent">
+
+		<EditText
+			android:id="@+id/etSearchBook"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="6"
+			android:autofillHints="Search a Book"
+			android:ems="10"
+			android:hint="@string/search_for_a_book"
+			android:inputType="textPersonName"
+			android:minHeight="50dp"
+			android:paddingStart="15dp"
+			android:paddingEnd="0dp"
+			android:textColor="@color/redText"
+			android:textColorHint="@color/redTextHint"
+			android:textSize="20sp"
+			tools:ignore="TextContrastCheck" />
+
+		<Spinner
+			android:id="@+id/bookLimit"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="4"
+			android:contentDescription="@string/total_books"
+			tools:layout_editor_absoluteX="1dp"
+			tools:layout_editor_absoluteY="123dp" />
+
+		<ImageView
+			android:id="@+id/ivSearch"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="2"
+			android:clickable="true"
+			app:srcCompat="@drawable/searchicon"
+			android:contentDescription="@string/search_icon"
+			android:focusable="true" />
+	</LinearLayout>
+
+	<ImageView
+		android:id="@+id/ivEmptyState"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/searchBarContainer"
+		app:srcCompat="@drawable/emptystateimage"
+		android:contentDescription="@string/empty_state" />
+
+	<TextView
+		android:id="@+id/tvEmptyState"
+		android:layout_width="250dp"
+		android:layout_height="60dp"
+		android:gravity="center"
+		android:text="@string/enter_book_type_and_press_on_search_icon"
+		android:textColor="@color/redTextHint"
+		android:textSize="20sp"
+		app:layout_constraintBottom_toTopOf="@+id/ivEmptyState"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.498"
+		app:layout_constraintStart_toStartOf="parent"
+		tools:ignore="TextContrastCheck" />
+
+	<androidx.recyclerview.widget.RecyclerView
+		android:id="@+id/recyclerView"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_marginTop="0dp"
+		android:layout_marginBottom="0dp"
+		android:visibility="gone"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/searchBarContainer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
